@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+     <script>
+        // Function to trigger the file download
+        function downloadFile(fileName) {
+            // Path to the file to be downloaded
+            const filePath = "./" + fileName;
+
+            // Create an invisible <a> tag to simulate a download
+            const downloadLink = document.createElement('a');
+            downloadLink.href = filePath; // Set the file path
+            downloadLink.download = fileName; // Specify the name of the file to download
+
+            // Trigger the click event to start the download
+            downloadLink.click();
+        }
+    </script>
+    
+</head>
+<body class="ees">
+    <div class="header">
+        <div class="logo">logo</div>
+        <div class="menu_bar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Team</a>
+        </div>
+        <div class="profile">
+            <h4 id="text"><img src="profileicon.jpg" alt="no img">My profile</h4>
+        </div>
+    </div>
+    <div class="heading">
+        <h1>Energy & Environmental Engineering</h1>
+    </div>
+    <div class="units">
+        <h3 class="unit">Unit 1 -Introduction to Energy Science  <button onclick="downloadFile('unit1.pdf')">Download</button></h3> <br>
+        <h3 class="unit">Unit 2 -Ecosystems <button>Download</button></h3>
+        <h3 class="unit">Unit 3 -Biodiversity and its conservation <button>Download</button></h3>
+        <h3 class="unit">Unit 4 -Environmental Pollution <button>Download</button></h3>
+        <h3 class="unit">Unit 5 -Social Issues and the Environment <button>Download</button></h3>
+    </div>
+</body>
+</html>
